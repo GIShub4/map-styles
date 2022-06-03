@@ -1,0 +1,43 @@
+{
+  "version": 8,
+  "sprite": "https://cdn.arcgis.com/sharing/rest/content/items/2afe5b807fa74006be6363fd243ffb30/resources/styles/../sprites/sprite",
+  "glyphs": "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/resources/fonts/{fontstack}/{range}.pbf",
+  "sources": {
+    "esri": {
+      "type": "vector",
+      "tiles": [
+        "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf"
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#ffffff"
+      }
+    },
+    {
+      "id": "Land",
+      "type": "fill",
+      "source": "esri",
+      "source-layer": "Land",
+      "minzoom": 0,
+      "layout": {},
+      "paint": {
+        "fill-color": "#f7f7f7"
+      }
+    },
+    {
+      "id": "Marine area",
+      "type": "fill",
+      "source": "esri",
+      "source-layer": "Marine area",
+      "layout": {},
+      "paint": {
+        "fill-color": "#ffffff"
+      }
+    }
+  ]
+}
