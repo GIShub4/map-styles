@@ -8,9 +8,24 @@
       "tiles": [
         "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf"
       ]
+    },
+    "mapTiles": {
+      "type": "raster",
+      "minzoom": 0,
+      "maxzoom": 23,
+      "tileSize": 256,
+      "tiles": [
+        "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}.png"
+      ],
+      "attribution": "Sources: Esri, Airbus DS, USGS, NGA, NASA, CGIAR, N Robinson, NCEAS, NLS, OS, NMA, Geodatastyrelsen, Rijkswaterstaat, GSA, Geoland, FEMA, Intermap and the GIS user community"
     }
   },
   "layers": [
+    {
+      "id": "tiles",
+      "type": "raster",
+      "source": "mapTiles"
+    },
     {
       "id": "Land/Not ice",
       "type": "fill",

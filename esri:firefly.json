@@ -1,0 +1,22 @@
+{
+  "version": 8,
+  "sources": {
+    "mapTiles": {
+      "type": "raster",
+      "minzoom": 0,
+      "maxzoom": 19,
+      "tileSize": 256,
+      "tiles": [
+        "https://fly.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Firefly/MapServer/tile/{z}/{y}/{x}.webp"
+      ],
+      "attribution": "Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community"
+    }
+  },
+  "layers": [
+    {
+      "id": "tiles",
+      "type": "raster",
+      "source": "mapTiles"
+    }
+  ]
+}
