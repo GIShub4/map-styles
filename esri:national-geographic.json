@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "sprite": "https://cdn.arcgis.com/sharing/rest/content/items/3d1a30626bbc46c582f148b9252676ce/resources/styles/../sprites/sprite",
+  "sprite": "https://cdn.arcgis.com/sharing/rest/content/items/efa46686e17d44d48dded3b31c62c83e/resources/styles/../sprites/sprite",
   "glyphs": "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/resources/fonts/{fontstack}/{range}.pbf",
   "sources": {
     "esri": {
@@ -8,9 +8,39 @@
       "tiles": [
         "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf"
       ]
+    },
+    "natGeo": {
+      "type": "raster",
+      "minzoom": 0,
+      "maxzoom": 9,
+      "tileSize": 256,
+      "tiles": [
+        "https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/NatGeoStyleBase/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "attribution": "Sources: Esri, USGS"
+    },
+    "mapTiles": {
+      "type": "raster",
+      "minzoom": 10,
+      "maxzoom": 23,
+      "tileSize": 256,
+      "tiles": [
+        "https://server.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "attribution": "Sources: Esri, USGS"
     }
   },
   "layers": [
+    {
+      "id": "natGeo",
+      "type": "raster",
+      "source": "natGeo"
+    },
+    {
+      "id": "tiles",
+      "type": "raster",
+      "source": "mapTiles"
+    },
     {
       "id": "Land/Not ice/SemiT",
       "type": "fill",
@@ -2406,7 +2436,7 @@
         "line-color": "#000000",
         "line-opacity": 0.3,
         "line-dasharray": [4.0, 2.0],
-        "line-offset": [5, -5],
+        "line-offset": 5,
         "line-width": {
           "base": 1.2,
           "stops": [
